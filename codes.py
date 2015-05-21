@@ -42,7 +42,6 @@ def s_id():
 	s_id = pd.read_csv("http://download.bls.gov/pub/time.series/cu/cu.series",
 	delim_whitespace=True, usecols=cols)
 
-	#"Replacing Values" section in McKinny
 	s_id['area_code'].replace(area_code(), inplace=True)
 	s_id['item_code'].replace(item_code(), inplace=True)
 	s_id['periodicity_code'].replace(periodicity_code(), inplace=True)
